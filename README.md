@@ -4,7 +4,7 @@ todo desc
 
 ### Installation
 
-* Get a squeak-trunk build (should work with version 5.4 or 6, after its release)
+* Get a [squeak-trunk build](http://files.squeak.org/trunk/) (should work with version 5.4 or 6, after its release)
 * Open a workspace by left-clicking into the world, select "Workspace"
 * Paste and select the following. Then press ctrl+d/cmd+d for "do-it"
 ```smalltalk
