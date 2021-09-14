@@ -1,4 +1,5 @@
 OrderedDictionary {
 	'packages/SKogi-Core' : #SquotTonelSerializer,
-	'packages/BaselineOfSKogi' : #SquotTonelSerializer
+	'packages/BaselineOfSKogi' : #SquotTonelSerializer,
+	'packages/SKogi-Tests' : #SquotTonelSerializer
 }
