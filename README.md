@@ -1,7 +1,7 @@
 # S/Kogi
 
 S/Kogi generates [Blockly](https://developers.google.com/blockly/) editors based on Rascal/Ohm-like grammars.
-It improves upon its predessor Kogi by transforming the input grammar to yield a block-based editor that more closely resembles the hand-crafted ones found in e.g. Scratch or MakeCode.
+It improves upon its predecessor Kogi by transforming the input grammar to yield a block-based editor that more closely resembles the hand-crafted ones found in e.g. Scratch or MakeCode.
 
 ### Installation
 
