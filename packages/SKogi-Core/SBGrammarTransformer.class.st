@@ -6,10 +6,9 @@ Class {
 
 { #category : #'example grammars' }
 SBGrammarTransformer class >> all [
-	"broken"
+	"click on any line and press ctrl+d (or right-click, then select 'do-it').
+Should nothing happen, verify that `xdg-open https://google.com` opens a browser."
 
-	SBGrammarTransformer grammarTinyJava simplifyAndOpen.
-	"working"
 	SBGrammarTransformer grammarStatemachine simplifyAndOpen.
 	SBGrammarTransformer grammarSonificationBlocks simplifyAndOpen.
 	SBGrammarTransformer grammarQL simplifyAndOpen.
@@ -18,7 +17,7 @@ SBGrammarTransformer class >> all [
 	SBGrammarTransformer grammarIki simplifyAndOpen.
 	SBGrammarTransformer grammarRascalJavascript simplifyAndOpen.
 	SBGrammarTransformer grammarMiniJava simplifyAndOpen.
-	^ SBGrammarTransformer grammarCloudLang simplifyAndOpen
+	SBGrammarTransformer grammarCloudLang simplifyAndOpen
 ]
 
 { #category : #'generate blocks' }
@@ -3050,6 +3049,7 @@ SBGrammarTransformer class >> mergeUpSimpleRules: g [
 			(rule allBlocksSelect: [:b | b isIdentifier]) size <= 1 and: [
 				rule allUsages notEmpty and: [
 					SBToggledCode comment: '' active: 1 do: {
+						[rule expression isAlternative not or: [rule expression childSandblocks allSatisfy: #isTerminal]].
 						[(rule expression allBlocksSelect: [:b | b isAlternative not or: [rule expression childSandblocks allSatisfy: #isTerminal]]) isEmpty].
 						[(rule isPrimitive not or: [rule expression isAlternative]) and: [rule expression isAlternative not or: [rule expression childSandblocks allSatisfy: #isTerminal]]]}]]]].
 	simpleRules do: [:r |

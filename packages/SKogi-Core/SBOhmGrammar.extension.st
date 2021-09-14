@@ -305,5 +305,8 @@ SBOhmGrammar >> openBlocklyFrom: anOriginalGrammar [
 	FileStream
 		forceNewFileNamed: file
 		do: [:f | f nextPutAll: (self blocklyHtmlFrom: anOriginalGrammar) withUnixLineEndings].
-	ExternalWebBrowser openOnUrl: 'file://', file
+	
+	(Smalltalk at: #OSProcess) waitForCommand: ((Smalltalk at: #OSProcess) isUnixMac
+		ifTrue: ['open ']
+		ifFalse: ['xdg-open ']), 'file://', file
 ]
