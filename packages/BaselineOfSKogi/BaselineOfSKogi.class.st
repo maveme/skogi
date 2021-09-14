@@ -47,10 +47,10 @@ BaselineOfSKogi >> baseline: spec [
 		spec baseline: 'Sandblocks' with: [spec repository: 'github://tom95/sandblocks:master/packages'].
 		spec configuration: 'OSProcess' with: [spec repository: 'http://www.squeaksource.com/OSProcess'].
 		
-		spec package: 'SKogi' with: [spec requires: #('SKogi-Core' 'Sandblocks' 'OSProcess')].
+		spec package: 'SKogi-Core' with: [spec requires: #('Sandblocks' 'OSProcess')].
 		
 		spec
-			group: 'default' with: #('SKogi');
+			group: 'default' with: #('SKogi-Core');
 			group: 'test' with: #('default')]
 ]
 
