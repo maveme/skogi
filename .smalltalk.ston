@@ -1,0 +1,9 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'SKogi',
+      #platforms : [ #squeak ],
+      #directory: 'packages'
+    }
+  ]
+}
